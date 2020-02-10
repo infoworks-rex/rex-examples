@@ -1,7 +1,0 @@
-/home/hwangjy/rex-examples/CAMERA/CMakeFiles/install/strip.dir
-/home/hwangjy/rex-examples/CAMERA/CMakeFiles/edit_cache.dir
-/home/hwangjy/rex-examples/CAMERA/CMakeFiles/rknn_demo.dir
-/home/hwangjy/rex-examples/CAMERA/CMakeFiles/rebuild_cache.dir
-/home/hwangjy/rex-examples/CAMERA/CMakeFiles/list_install_components.dir
-/home/hwangjy/rex-examples/CAMERA/CMakeFiles/install/local.dir
-/home/hwangjy/rex-examples/CAMERA/CMakeFiles/install.dir
