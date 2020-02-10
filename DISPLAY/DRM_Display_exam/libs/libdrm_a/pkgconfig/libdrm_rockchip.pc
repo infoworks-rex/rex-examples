@@ -1,0 +1,11 @@
+prefix=/home/infoworks/Ex_HDD/Rockchip/rk3399pro-evb/rk3399pro_linux_beta_v0.02_20190321/external/libdrm/output
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libdrm_rockchip
+Description: Userspace interface to rockchip kernel DRM services
+Version: 0.1
+Libs: -L${libdir} -ldrm_rockchip
+Cflags: -I${includedir} -I${includedir}/libdrm
+Requires.private: libdrm

@@ -1,0 +1,11 @@
+prefix=/home/infoworks/Ex_HDD/Rockchip/rk3399pro-evb/rk3399pro_linux_beta_v0.02_20190321/external/libdrm/output
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libdrm_freedreno
+Description: Userspace interface to freedreno kernel DRM services
+Version: 2.4.75
+Libs: -L${libdir} -ldrm_freedreno
+Cflags: -I${includedir} -I${includedir}/libdrm -I${includedir}/freedreno
+Requires.private: libdrm
