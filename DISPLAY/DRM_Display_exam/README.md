@@ -4,10 +4,8 @@
 
 ## build 방법
 
-cd build;
-
+mkdir build; cd build
 cmake ..
-
 make
 
 
