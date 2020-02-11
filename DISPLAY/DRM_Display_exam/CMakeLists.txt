@@ -24,7 +24,7 @@ link_directories(drm_display_exam
 
 file(GLOB_RECURSE SRC_FILES
 	${CMAKE_SOURCE_DIR}/src/*.cc
-#	"src/*.cc"
+
 )
 
 add_executable(drm_display_exam
