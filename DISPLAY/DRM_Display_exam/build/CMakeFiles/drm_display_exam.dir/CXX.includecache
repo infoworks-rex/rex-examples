@@ -1364,7 +1364,7 @@ rga.h
 
 ../include/rga/rga.h
 
-/home/hwangjy/rex-examples/DISPLAY/DRM_Display_exam/src/test.cc
+/home/hwangjy/rex-examples/DISPLAY/DRM_Display_exam/src/drm_display_exam.cc
 errno.h
 -
 fcntl.h

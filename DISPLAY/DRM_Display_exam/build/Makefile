@@ -123,32 +123,32 @@ drm_display_exam/fast:
 	$(MAKE) -f CMakeFiles/drm_display_exam.dir/build.make CMakeFiles/drm_display_exam.dir/build
 .PHONY : drm_display_exam/fast
 
-src/test.o: src/test.cc.o
+src/drm_display_exam.o: src/drm_display_exam.cc.o
 
-.PHONY : src/test.o
+.PHONY : src/drm_display_exam.o
 
 # target to build an object file
-src/test.cc.o:
-	$(MAKE) -f CMakeFiles/drm_display_exam.dir/build.make CMakeFiles/drm_display_exam.dir/src/test.cc.o
-.PHONY : src/test.cc.o
+src/drm_display_exam.cc.o:
+	$(MAKE) -f CMakeFiles/drm_display_exam.dir/build.make CMakeFiles/drm_display_exam.dir/src/drm_display_exam.cc.o
+.PHONY : src/drm_display_exam.cc.o
 
-src/test.i: src/test.cc.i
+src/drm_display_exam.i: src/drm_display_exam.cc.i
 
-.PHONY : src/test.i
+.PHONY : src/drm_display_exam.i
 
 # target to preprocess a source file
-src/test.cc.i:
-	$(MAKE) -f CMakeFiles/drm_display_exam.dir/build.make CMakeFiles/drm_display_exam.dir/src/test.cc.i
-.PHONY : src/test.cc.i
+src/drm_display_exam.cc.i:
+	$(MAKE) -f CMakeFiles/drm_display_exam.dir/build.make CMakeFiles/drm_display_exam.dir/src/drm_display_exam.cc.i
+.PHONY : src/drm_display_exam.cc.i
 
-src/test.s: src/test.cc.s
+src/drm_display_exam.s: src/drm_display_exam.cc.s
 
-.PHONY : src/test.s
+.PHONY : src/drm_display_exam.s
 
 # target to generate assembly for a file
-src/test.cc.s:
-	$(MAKE) -f CMakeFiles/drm_display_exam.dir/build.make CMakeFiles/drm_display_exam.dir/src/test.cc.s
-.PHONY : src/test.cc.s
+src/drm_display_exam.cc.s:
+	$(MAKE) -f CMakeFiles/drm_display_exam.dir/build.make CMakeFiles/drm_display_exam.dir/src/drm_display_exam.cc.s
+.PHONY : src/drm_display_exam.cc.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... drm_display_exam"
 	@echo "... edit_cache"
-	@echo "... src/test.o"
-	@echo "... src/test.i"
-	@echo "... src/test.s"
+	@echo "... src/drm_display_exam.o"
+	@echo "... src/drm_display_exam.i"
+	@echo "... src/drm_display_exam.s"
 .PHONY : help
 
 

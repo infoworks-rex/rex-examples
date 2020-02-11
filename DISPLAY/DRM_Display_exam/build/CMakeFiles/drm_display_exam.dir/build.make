@@ -57,38 +57,38 @@ include CMakeFiles/drm_display_exam.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/drm_display_exam.dir/flags.make
 
-CMakeFiles/drm_display_exam.dir/src/test.cc.o: CMakeFiles/drm_display_exam.dir/flags.make
-CMakeFiles/drm_display_exam.dir/src/test.cc.o: ../src/test.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hwangjy/rex-examples/DISPLAY/DRM_Display_exam/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/drm_display_exam.dir/src/test.cc.o"
-	aarch64-linux-gnu-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/drm_display_exam.dir/src/test.cc.o -c /home/hwangjy/rex-examples/DISPLAY/DRM_Display_exam/src/test.cc
+CMakeFiles/drm_display_exam.dir/src/drm_display_exam.cc.o: CMakeFiles/drm_display_exam.dir/flags.make
+CMakeFiles/drm_display_exam.dir/src/drm_display_exam.cc.o: ../src/drm_display_exam.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hwangjy/rex-examples/DISPLAY/DRM_Display_exam/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/drm_display_exam.dir/src/drm_display_exam.cc.o"
+	aarch64-linux-gnu-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/drm_display_exam.dir/src/drm_display_exam.cc.o -c /home/hwangjy/rex-examples/DISPLAY/DRM_Display_exam/src/drm_display_exam.cc
 
-CMakeFiles/drm_display_exam.dir/src/test.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/drm_display_exam.dir/src/test.cc.i"
-	aarch64-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hwangjy/rex-examples/DISPLAY/DRM_Display_exam/src/test.cc > CMakeFiles/drm_display_exam.dir/src/test.cc.i
+CMakeFiles/drm_display_exam.dir/src/drm_display_exam.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/drm_display_exam.dir/src/drm_display_exam.cc.i"
+	aarch64-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hwangjy/rex-examples/DISPLAY/DRM_Display_exam/src/drm_display_exam.cc > CMakeFiles/drm_display_exam.dir/src/drm_display_exam.cc.i
 
-CMakeFiles/drm_display_exam.dir/src/test.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/drm_display_exam.dir/src/test.cc.s"
-	aarch64-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hwangjy/rex-examples/DISPLAY/DRM_Display_exam/src/test.cc -o CMakeFiles/drm_display_exam.dir/src/test.cc.s
+CMakeFiles/drm_display_exam.dir/src/drm_display_exam.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/drm_display_exam.dir/src/drm_display_exam.cc.s"
+	aarch64-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hwangjy/rex-examples/DISPLAY/DRM_Display_exam/src/drm_display_exam.cc -o CMakeFiles/drm_display_exam.dir/src/drm_display_exam.cc.s
 
-CMakeFiles/drm_display_exam.dir/src/test.cc.o.requires:
+CMakeFiles/drm_display_exam.dir/src/drm_display_exam.cc.o.requires:
 
-.PHONY : CMakeFiles/drm_display_exam.dir/src/test.cc.o.requires
+.PHONY : CMakeFiles/drm_display_exam.dir/src/drm_display_exam.cc.o.requires
 
-CMakeFiles/drm_display_exam.dir/src/test.cc.o.provides: CMakeFiles/drm_display_exam.dir/src/test.cc.o.requires
-	$(MAKE) -f CMakeFiles/drm_display_exam.dir/build.make CMakeFiles/drm_display_exam.dir/src/test.cc.o.provides.build
-.PHONY : CMakeFiles/drm_display_exam.dir/src/test.cc.o.provides
+CMakeFiles/drm_display_exam.dir/src/drm_display_exam.cc.o.provides: CMakeFiles/drm_display_exam.dir/src/drm_display_exam.cc.o.requires
+	$(MAKE) -f CMakeFiles/drm_display_exam.dir/build.make CMakeFiles/drm_display_exam.dir/src/drm_display_exam.cc.o.provides.build
+.PHONY : CMakeFiles/drm_display_exam.dir/src/drm_display_exam.cc.o.provides
 
-CMakeFiles/drm_display_exam.dir/src/test.cc.o.provides.build: CMakeFiles/drm_display_exam.dir/src/test.cc.o
+CMakeFiles/drm_display_exam.dir/src/drm_display_exam.cc.o.provides.build: CMakeFiles/drm_display_exam.dir/src/drm_display_exam.cc.o
 
 
 # Object files for target drm_display_exam
 drm_display_exam_OBJECTS = \
-"CMakeFiles/drm_display_exam.dir/src/test.cc.o"
+"CMakeFiles/drm_display_exam.dir/src/drm_display_exam.cc.o"
 
 # External object files for target drm_display_exam
 drm_display_exam_EXTERNAL_OBJECTS =
 
-drm_display_exam: CMakeFiles/drm_display_exam.dir/src/test.cc.o
+drm_display_exam: CMakeFiles/drm_display_exam.dir/src/drm_display_exam.cc.o
 drm_display_exam: CMakeFiles/drm_display_exam.dir/build.make
 drm_display_exam: CMakeFiles/drm_display_exam.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hwangjy/rex-examples/DISPLAY/DRM_Display_exam/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable drm_display_exam"
@@ -99,7 +99,7 @@ CMakeFiles/drm_display_exam.dir/build: drm_display_exam
 
 .PHONY : CMakeFiles/drm_display_exam.dir/build
 
-CMakeFiles/drm_display_exam.dir/requires: CMakeFiles/drm_display_exam.dir/src/test.cc.o.requires
+CMakeFiles/drm_display_exam.dir/requires: CMakeFiles/drm_display_exam.dir/src/drm_display_exam.cc.o.requires
 
 .PHONY : CMakeFiles/drm_display_exam.dir/requires
 

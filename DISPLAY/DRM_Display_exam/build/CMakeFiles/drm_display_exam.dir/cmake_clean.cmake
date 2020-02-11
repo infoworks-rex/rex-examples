@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/drm_display_exam.dir/src/test.cc.o"
+  "CMakeFiles/drm_display_exam.dir/src/drm_display_exam.cc.o"
   "drm_display_exam.pdb"
   "drm_display_exam"
 )
