@@ -70,11 +70,11 @@ int main(int argc, char **argv)
 
     while(1){
         mainloop_nowhile(&cam);
-        if(checkstdin(10000)){
+/*        if(checkstdin(10000)){
             if (getchar() == 'q') {
                 break;
             }
-        }
+        }*/
     }
     func_exit();
     return 0;
@@ -84,6 +84,7 @@ int main(int argc, char **argv)
 void video_receive(void *p, int length, int camera_number){
     raw_video.start = p;
     raw_video.length = length;
+	printf("Video_recive check %s\n",__func__);
     display_draw();
 }
 

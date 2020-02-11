@@ -14,23 +14,21 @@
 #include <xf86drm.h>
 #include <xf86drmMode.h>
 #include <rga/RgaApi.h>
-//#include <RockchipRga.h>
 
 #include <iostream>
-
 
 #include "opencv2/core/core.hpp"
 #include "opencv2/imgproc/imgproc.hpp"
 #include "opencv2/highgui/highgui.hpp"
-
-//#include "rga.h"
 
 using namespace std;
 using namespace cv; 
 
 #define DISP_W		1920
 #define DISP_H		1080
-#define DISP_BPP	32
+#define DISP_CH		4
+#define DISP_BIT	8
+#define DISP_BPP	DISP_CH*DISP_BIT
 
 #define SRC_FMT	RK_FORMAT_BGR_888
 #define DST_FMT	RK_FORMAT_BGRA_8888
@@ -335,15 +333,14 @@ static int drm_open(int *out, const char *node)
 	return 0;
 }
 
-static inline void modeset_draw(uint8_t* ptr)
+static void modeset_draw(uint8_t* ptr)
 {
 	uint8_t r, g, b;
 	unsigned int x, y, off;
 	struct drm_dev *iter;
-
 	for (iter = modeset_list; iter; iter = iter->next) {
-		memcpy((uint8_t*)&iter->map[0], &ptr[0], 1920*1080*4);
-//		memset((uint8_t*)&iter->map[0], (uint32_t)0x00FF00FF, 1920*1080*4);
+		memcpy((uint8_t*)&iter->map[0], &ptr[0], DISP_W*DISP_H*DISP_CH);
+		//memset((uint8_t*)&iter->map[0], (uint32_t)0x00FF00FF, 1920*1080*4); // TEST Code
 	}	
 	usleep(20000000);
 }
@@ -428,21 +425,37 @@ int main(int argc, char **argv)
 
 	if (argc < 2) {
 		printf("Image is null\n");
+		printf("Usage : ./drm_display_exam [ImageFile]\n");
 		exit(EXIT_FAILURE);
 	}
 
 	fprintf(stderr, "using card '%s'\n", card);
 
+	src_img = imread(argv[1], IMREAD_COLOR);
+    printf("width : %d height : %d  \n",src_img.cols, src_img.rows);
+
 	drm_fd = drm_init(card);
+//	printf("Width=%u Height=%u Stride=%u Size=%u\n", modeset_list->width, modeset_list->height, modeset_list->stride, modeset_list->size);
 	printf("Width=%u Height=%u Stride=%u Size=%u\n", modeset_list->width, modeset_list->height, modeset_list->stride, modeset_list->size);
 
 
-	src_img = imread(argv[1], IMREAD_COLOR);
-    printf("width : %d height : %d \n",src_img.rows, src_img.cols);
 
 #if 1
+    cvtColor(src_img, orig_img, COLOR_BGR2BGRA);
+	resize(orig_img, img, cv::Size(modeset_list->width, modeset_list->height), 0, 0, cv::INTER_LINEAR);
+	modeset_draw(img.data);    
+
+
+	drm_cleanup(drm_fd);
+
+	ret = 0;
+
+
+	return ret;
+#else 
+
 	void* dst_v = NULL;
-	dst_v = malloc(DISP_W * DISP_H * 4);
+	dst_v = malloc(DISP_W * DISP_H * DISP_CH);
 
 	c_RkRgaInit();
 
@@ -468,19 +481,6 @@ int main(int argc, char **argv)
 
 	drm_cleanup(drm_fd);
 	return 0;
-#endif
 
-#if 0
-    cvtColor(src_img, orig_img, COLOR_BGR2BGRA);
-	resize(orig_img, img, cv::Size(modeset_list->width, modeset_list->height), 0, 0, cv::INTER_LINEAR);
-	modeset_draw(img.data);    
-
-
-	drm_cleanup(drm_fd);
-
-	ret = 0;
-
-
-	return ret;
 #endif
 }
