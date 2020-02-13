@@ -12,8 +12,7 @@
 #define CAM_W		640
 #define CAM_H		480
 #define CAM_SIZE	CAM_W * CAM_H
-//#define CAM_FMT 	V4L2_PIX_FMT_YUV420
-#define CAM_FMT		RK_FORMAT_YCbCr_420_P
+#define CAM_FMT 	V4L2_PIX_FMT_YUV420
 #define CAM_BPP	2
 
 #define IMG_SIZE CAM_W * CAM_H * CAM_BPP

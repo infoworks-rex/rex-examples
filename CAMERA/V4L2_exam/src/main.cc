@@ -80,14 +80,13 @@ void *display_loop(void *ptr)
     src.data        = camera_buf;
     src.width   = CAM_H;
     src.height  = CAM_W;
-    src.format  = CAM_FMT;
+    src.format  = RK_FORMAT_YCrCb_420_P;
     src.direction = 0;
-	//src.direction = HAL_TRANSFORM_ROT_270;
 
     dst.data        = modeset_list->map;
     dst.width   = DISP_H;
     dst.height  = DISP_W;
-    dst.format  = DISP_FMT;
+    dst.format  = RK_FORMAT_RGBA_8888;
     
 	//init drm
 	
