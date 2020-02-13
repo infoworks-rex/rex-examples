@@ -55,10 +55,7 @@ void *camera_loop(void *ptr)
     while (1) {
         pthread_mutex_lock(&mutex_lock);
 
-        printf("Camera get frame helper _start \n");
         ret = camera_get_frame_helper(cam_fd, &camera_buf, &size);
-        printf("Camera get frame helper _end\n");
-
 
         status = 1;
         pthread_cond_signal(&thread_cond);
@@ -98,17 +95,12 @@ void *display_loop(void *ptr)
             pthread_cond_wait(&thread_cond, &mutex_lock);
         }   
 		gettimeofday(&start, NULL);
-        ret = rknn_run_helper(rknn_ctx, (void *)camera_buf, IMG_SIZE, out);
         rga_transform(&src, &dst);
 
         gettimeofday(&end, NULL);
         diffTime = (end.tv_sec - start.tv_sec) * 1000.0;      // sec to ms
         diffTime += (end.tv_usec - start.tv_usec) / 1000.0;   // us to ms
-
-        printf("Display Done\n");
-        printf("Display Time : %f\n", diffTime);
-
-        printf("Display Done\n");
+        //printf("Display Time : %f\n", diffTime);
         status = 0;
         pthread_mutex_unlock(&mutex_lock);
     }
