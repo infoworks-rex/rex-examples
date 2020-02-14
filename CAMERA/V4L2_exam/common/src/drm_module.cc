@@ -238,7 +238,7 @@ err_destroy:
 
 int drm_init(const char *device, drm_dev_t **modeset_list)
 {
-	TODO("Change Error/Debug printf to macro \n");
+	TODO("Change Error/Debug printf to macro");
 
 	int ret, fd;
 	struct drm_dev *iter;
