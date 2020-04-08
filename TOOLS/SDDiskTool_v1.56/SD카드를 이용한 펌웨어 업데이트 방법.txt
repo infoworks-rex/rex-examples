@@ -1,0 +1,11 @@
+SD카드를 이용한 펌웨어 업데이트 방법
+
+1. SD_Firmware_Tool.exe 실행
+
+2. option Upgrade Firmware 만 선택
+
+3. Firmware 버튼으로 업데이트 이미지 파일(default : update.img) 선택
+
+4. Create 버튼 클릭
+
+5. 보드에 SD삽입 후 부팅
