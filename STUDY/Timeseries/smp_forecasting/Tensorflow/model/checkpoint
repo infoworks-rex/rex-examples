@@ -1,0 +1,6 @@
+model_checkpoint_path: "lstm.ckpt500-500"
+all_model_checkpoint_paths: "lstm.ckpt496-496"
+all_model_checkpoint_paths: "lstm.ckpt497-497"
+all_model_checkpoint_paths: "lstm.ckpt498-498"
+all_model_checkpoint_paths: "lstm.ckpt499-499"
+all_model_checkpoint_paths: "lstm.ckpt500-500"
