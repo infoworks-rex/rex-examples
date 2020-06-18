@@ -1,0 +1,6 @@
+
+python freeze_graph.py \
+--input_graph=/graph.pbtxt \
+--input_checkpoint=/DnCNN-tensorflow-353500 \
+--output_graph=/freeze.pb \
+--output_node_names=sub
