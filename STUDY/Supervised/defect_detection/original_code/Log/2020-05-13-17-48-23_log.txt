@@ -1,0 +1,12 @@
+[INFO]   2020-05-13 17:48:23,284    start testing
+[INFO]   2020-05-13 17:48:45,292     total number of samples = 160
+[INFO]   2020-05-13 17:48:45,292    positive = 22
+[INFO]   2020-05-13 17:48:45,292    negative = 138
+[INFO]   2020-05-13 17:48:45,292    TP = 21
+[INFO]   2020-05-13 17:48:45,292    FP = 1
+[INFO]   2020-05-13 17:48:45,292    TN = 137
+[INFO]   2020-05-13 17:48:45,292    FN = 1
+[INFO]   2020-05-13 17:48:45,292    accuracy(정확도) = 0.9875
+[INFO]   2020-05-13 17:48:45,292    prescision（검준율） = 0.9545
+[INFO]   2020-05-13 17:48:45,293    recall（전수율）= 0.9545
+[INFO]   2020-05-13 17:48:45,293    the visualization saved in ./visualization/test
